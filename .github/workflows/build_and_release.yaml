@@ -12,12 +12,18 @@ jobs:
         steps:
             - id: s01
               run: echo "github ${{ github.ref_name }}"
-            - run: echo "before" && ls -l
             - id: s02
               uses: actions/setup-node@v4
               with:
-
                 node-version: 24
             - id: s03
               uses: actions/checkout@v5
-            - run: echo "after" && ls -l
+            - id: s04
+              # install Angular cli & install packages from packages.json
+              run: npm i -g @angular/cli && npm ci
+            - id: s05
+              # build the application
+              run: ng build
+            - id: s06
+              run: ls -l dist/countingbook/browser/
+            
