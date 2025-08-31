@@ -1,11 +1,10 @@
 # name
-name: new_tag
+name: new_release
 
 # trigger
 on:
-    push:
-        tags:
-            - **
+  release:
+    types: [created]
 
 # one or more jobs
 jobs:
