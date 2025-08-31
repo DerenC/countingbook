@@ -1,0 +1,16 @@
+# name
+name: build_countingbook_app
+
+# trigger
+on:
+    push:
+        tags:
+            - **
+
+# one or more jobs
+jobs:
+    build_app:
+        runs-on: ubuntu-latest
+        steps:
+            - id: s01
+              run: echo "There is a new release"
