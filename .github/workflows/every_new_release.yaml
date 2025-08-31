@@ -1,5 +1,5 @@
 # name
-name: build_countingbook_app
+name: new_tag
 
 # trigger
 on:
@@ -9,7 +9,7 @@ on:
 
 # one or more jobs
 jobs:
-    build_app:
+    new_tag:
         runs-on: ubuntu-latest
         steps:
             - id: s01
