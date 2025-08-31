@@ -12,4 +12,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - id: s01
-              run: echo "There is a new release"
+              run: echo "There is a new release. It is ${{ github.event.release.name }}"
