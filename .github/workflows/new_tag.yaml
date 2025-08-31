@@ -12,4 +12,4 @@ jobs:
         runs-on: ubuntu-latest
         steps:
             - id: s01
-              run: echo "A commit is being tagged"
+              run: echo "A commit is being tagged as ${{ github.ref.new_tag }}"
