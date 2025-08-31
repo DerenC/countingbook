@@ -4,11 +4,11 @@ name: new_release
 # trigger
 on:
   release:
-    types: [created]
+    types: [published]
 
 # one or more jobs
 jobs:
-    new_tag:
+    new_release:
         runs-on: ubuntu-latest
         steps:
             - id: s01
